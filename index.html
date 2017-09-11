@@ -35,62 +35,201 @@
     
     <a href="#">
         <div id="btn-apbdes" class="btn">
-            <i class="fa fa-money"></i>
             <h4>APBDes</h4>
+            <i class="fa fa-money"></i>
+            
         </div>
     </a>
     
     <a href="#">
         <div id="btn-luasdesa" class="btn">
-            <i class="fa fa-map"></i>
             <h4>Luas Desa</h4>
+            <i class="fa fa-map"></i>
+            
         </div>
     </a>
     
     <a href="#">
-        <div id="btn-penduduk" class="btn">
-            <i class="fa fa-male"></i>
+        <div id="btn-penduduk" class="btn" style="padding-right: 15px;">
             <h4>Jumlah Penduduk</h4>
+            <i class="fa fa-male"></i>
+            
         </div>
     </a>
     
     <a href="#">
         <div id="btn-pendidikan" class="btn">
-            <i class="fa fa-building"></i>
             <h4>Pendidikan</h4>
+            <i class="fa fa-building"></i>
+            
         </div>
     </a>
     
     <a href="#">
         <div id="btn-listrik" class="btn">
-            <i class="fa fa-plug"></i>
             <h4>Listrik</h4>
+            <i class="fa fa-plug"></i>
+            
         </div>
     </a>
     
     <a href="#">
-        <div id="btn-pengairan" class="btn">
-            <i class="fa fa-tint"></i>
+        <div id="btn-pengairan" class="btn" style="padding-right: 15px;">
             <h4>Pengairan</h4>
+            <i class="fa fa-tint"></i>
+            
         </div>
     </a>
     
     <a href="#">
         <div id="btn-komunikasi" class="btn">
+           <h4>Sarana Komunikasi</h4>
             <i class="fa fa-phone"></i>
-            <h4>Sarana Komunikasi</h4>
+            
         </div>
     </a>
     
     <a href="#">
         <div id="btn-potensi" class="btn">
+           <h4>Potensi Desa</h4>
             <i class="fa fa-leaf"></i>
-            <h4>Potensi Desa</h4>
+            
         </div>
     </a>
     
     <script>
-        
+
+var styles = [
+    {
+        "featureType": "water",
+        "stylers": [
+            {
+                "saturation": 43
+            },
+            {
+                "lightness": -11
+            },
+            {
+                "hue": "#0088ff"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "hue": "#ff0000"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 99
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#808080"
+            },
+            {
+                "lightness": 54
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ece2d9"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ccdca1"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#767676"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#b8cb93"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.sports_complex",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.medical",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.business",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    }
+]   
         
         function initMap() {
             var uluru = {lat: -0.7893, lng: 113.9213};
@@ -103,7 +242,8 @@
                 scaleControl: true,
                 streetViewControl: false,
                 rotateControl: false,
-                fullscreenControl: true
+                fullscreenControl: true,
+                styles: styles,
             });
             
         }
