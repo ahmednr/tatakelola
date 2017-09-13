@@ -1,0 +1,138 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Tata Kelola</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[ENTER SITE DESCRIPTION HERE]">
+    <meta name="author" content="[ENTER AUTHOR INFO HERE]">
+
+    <link rel="apple-touch-icon" href="[INSERT apple-tuch-icon.png]">
+
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/home.css">
+    
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+
+    
+</head>
+
+<body>
+    
+    <div id="map"></div>
+    <div id="cari">
+            <img src="res/logobp3ti.png">
+            <input list="daftar-desa" type="text" placeholder="Cari desa">
+ 
+            <datalist id="daftar-desa">
+                <option value="Desa A"></option>
+                <option value="Desa B"></option>
+                <option value="Desa C"></option>
+                <option value="Desa D"></option>
+                <option value="Desa E"></option>
+                <option value="Desa F"></option>
+                <option value="Desa G"></option>
+                
+            </datalist>
+    </div>
+    
+    <div class="btn-dashboard">
+        <a href="#"><button class="btn-db-k">Dashboard Keuangan</button></a>
+        <a href="#"><button class="btn-db-m">Dashboard Monitoring</button></a>
+    </div>
+    
+    <a href="#">
+        <div id="btn-apbdes" class="btn">
+            <h4>APBDes</h4>
+            <i class="fa fa-money"></i>
+            
+        </div>
+    </a>
+    
+    <a href="#">
+        <div id="btn-luasdesa" class="btn">
+            <h4>Luas Desa</h4>
+            <i class="fa fa-map"></i>
+            
+        </div>
+    </a>
+    
+    <a href="#">
+        <div id="btn-penduduk" class="btn" style="padding-right: 15px;">
+            <h4>Jumlah Penduduk</h4>
+            <i class="fa fa-male"></i>
+            
+        </div>
+    </a>
+    
+    <a href="#">
+        <div id="btn-pendidikan" class="btn">
+            <h4>Pendidikan</h4>
+            <i class="fa fa-building"></i>
+            
+        </div>
+    </a>
+    
+    <a href="#">
+        <div id="btn-listrik" class="btn">
+            <h4>Listrik</h4>
+            <i class="fa fa-plug"></i>
+            
+        </div>
+    </a>
+    
+    <a href="#">
+        <div id="btn-pengairan" class="btn" style="padding-right: 15px;">
+            <h4>Pengairan</h4>
+            <i class="fa fa-tint"></i>
+            
+        </div>
+    </a>
+    
+    <a href="#">
+        <div id="btn-komunikasi" class="btn">
+           <h4>Sarana Komunikasi</h4>
+            <i class="fa fa-phone"></i>
+            
+        </div>
+    </a>
+    
+    <a href="#">
+        <div id="btn-potensi" class="btn">
+           <h4>Potensi Desa</h4>
+            <i class="fa fa-leaf"></i>
+            
+        </div>
+    </a>
+    
+    <script>
+
+        
+        var map = L.map('map').setView([-0.7893, 113.9213], 5);
+
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: '',
+            id: 'mapbox.streets'
+        }).addTo(map);
+
+        //map.locate({setView: true, maxZoom: 16});
+    </script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>
