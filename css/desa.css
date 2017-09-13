@@ -1,20 +1,26 @@
-body, html {
-    width: 100%; height: 100%; 
+body,
+html {
+    width: 100%;
+    height: 100%;
 }
 
 div#content {
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 #map {
-    position: absolute; 
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: 0;
 }
 
 #title {
-    position: absolute; top: 10px; left: 10px; z-index: 99;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 99;
 }
 
 .btn-dashboard {
@@ -55,8 +61,8 @@ div#content {
     box-shadow: 1px 1px 1px #888888;
 }
 
-.sidebar > a {
-  text-decoration: none;
+.sidebar>a {
+    text-decoration: none;
 }
 
 div.side {
@@ -67,7 +73,7 @@ div.side {
     z-index: 10;
     left: 0px;
     transition: .3s ease;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     vertical-align: middle;
     border-bottom: solid 1px #cccccc;
 }
@@ -83,8 +89,7 @@ div.side:active {
     color: #fff;
 }
 
-
-div.side > i {
+div.side>i {
     display: inline-block;
     width: 10%;
     
@@ -93,13 +98,11 @@ div.side > i {
     text-align: center;
 }
 
-
-div.side > h4 {
+div.side>h4 {
     display: inline;
     font-size: 10pt;
     position: relative;
     margin-left: 10px;
-    
 }
 
 #cari {
@@ -111,11 +114,9 @@ div.side > h4 {
     background: #fff;
     box-shadow: 1px 1px 1px #888888;
     font-size: 10pt;
-    
-    
 }
 
-#cari > img {
+#cari>img {
     height: 30px;
     width: 30px;
     margin-right: 15px;

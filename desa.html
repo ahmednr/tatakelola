@@ -19,21 +19,21 @@
 
     <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/desa.css">
-    
+
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    
+
 </head>
 
 <body>
-    
+
     <div id="map"></div>
     <div id="cari">
-            <img src="res/logobp3ti.png">
-            <input list="daftar-desa" type="text" placeholder="Cari desa">
- 
-            <datalist id="daftar-desa">
+        <img src="res/logobp3ti.png">
+        <input list="daftar-desa" type="text" placeholder="Cari desa">
+
+        <datalist id="daftar-desa">
                 <option value="Desa A"></option>
                 <option value="Desa B"></option>
                 <option value="Desa C"></option>
@@ -44,12 +44,12 @@
                 
             </datalist>
     </div>
-    
+
     <div class="btn-dashboard">
         <a href="#"><button class="btn-db-k">Dashboard Keuangan</button></a>
         <a href="#"><button class="btn-db-m">Dashboard Monitoring</button></a>
     </div>
-    
+
     <div class="sidebar">
         <a href="#">
             <div id="btn-apbdes" class="side">
@@ -102,7 +102,7 @@
         <a href="#">
             <div id="btn-komunikasi" class="side">
                 <i class="fa fa-phone"></i>
-               <h4>Telkomsel, Alas, Telemor, TLS TT, Telkomcell</h4>
+                <h4>Telkomsel, Alas, Telemor, TLS TT, Telkomcell</h4>
 
             </div>
         </a>
@@ -110,152 +110,128 @@
         <a href="#">
             <div id="btn-potensi" class="side">
                 <i class="fa fa-leaf"></i>
-               <h4>Pertanian : <br>
-                    Jagung, kacang tanah, bawang merah, bawang putih, dan kacang hijau <br><br>
-
-                    Peternakan :<br>
-                    Sapi</h4>
+                <h4>Pertanian : <br> Jagung, kacang tanah, bawang merah, bawang putih, dan kacang hijau <br><br> Peternakan :<br> Sapi
+                </h4>
 
             </div>
         </a>
     </div>
-    
-    <script>
 
-var styles = [
-    {
-        "featureType": "water",
-        "stylers": [
-            {
-                "saturation": 43
+    <script>
+        var styles = [{
+                "featureType": "water",
+                "stylers": [{
+                        "saturation": 43
+                    },
+                    {
+                        "lightness": -11
+                    },
+                    {
+                        "hue": "#0088ff"
+                    }
+                ]
             },
             {
-                "lightness": -11
+                "featureType": "road",
+                "elementType": "geometry.fill",
+                "stylers": [{
+                        "hue": "#ff0000"
+                    },
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "lightness": 99
+                    }
+                ]
             },
             {
-                "hue": "#0088ff"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "hue": "#ff0000"
+                "featureType": "road",
+                "elementType": "geometry.stroke",
+                "stylers": [{
+                        "color": "#808080"
+                    },
+                    {
+                        "lightness": 54
+                    }
+                ]
             },
             {
-                "saturation": -100
+                "featureType": "landscape.man_made",
+                "elementType": "geometry.fill",
+                "stylers": [{
+                    "color": "#ece2d9"
+                }]
             },
             {
-                "lightness": 99
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#808080"
+                "featureType": "poi.park",
+                "elementType": "geometry.fill",
+                "stylers": [{
+                    "color": "#ccdca1"
+                }]
             },
             {
-                "lightness": 54
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.man_made",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ece2d9"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ccdca1"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#767676"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.natural",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "visibility": "on"
+                "featureType": "road",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#767676"
+                }]
             },
             {
-                "color": "#b8cb93"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "stylers": [
+                "featureType": "road",
+                "elementType": "labels.text.stroke",
+                "stylers": [{
+                    "color": "#ffffff"
+                }]
+            },
             {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.sports_complex",
-        "stylers": [
+                "featureType": "poi",
+                "stylers": [{
+                    "visibility": "off"
+                }]
+            },
             {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.medical",
-        "stylers": [
+                "featureType": "landscape.natural",
+                "elementType": "geometry.fill",
+                "stylers": [{
+                        "visibility": "on"
+                    },
+                    {
+                        "color": "#b8cb93"
+                    }
+                ]
+            },
             {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.business",
-        "stylers": [
+                "featureType": "poi.park",
+                "stylers": [{
+                    "visibility": "on"
+                }]
+            },
             {
-                "visibility": "simplified"
+                "featureType": "poi.sports_complex",
+                "stylers": [{
+                    "visibility": "on"
+                }]
+            },
+            {
+                "featureType": "poi.medical",
+                "stylers": [{
+                    "visibility": "on"
+                }]
+            },
+            {
+                "featureType": "poi.business",
+                "stylers": [{
+                    "visibility": "simplified"
+                }]
             }
         ]
-    }
-]   
-        
+
         function initMap() {
-            var uluru = {lat: -0.7893, lng: 113.9213};
+            var uluru = {
+                lat: -0.7893,
+                lng: 113.9213
+            };
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 5,
                 center: uluru,
@@ -268,13 +244,15 @@ var styles = [
                 fullscreenControl: true,
                 styles: styles,
             });
-            
+
         }
+
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMTRd5H7NsU050nv5_dDpzCiC5-Ite0pI&callback=initMap&language=id">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMTRd5H7NsU050nv5_dDpzCiC5-Ite0pI&callback=initMap&language=id">
+
+
     </script>
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
