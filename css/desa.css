@@ -45,6 +45,8 @@ div#content {
     background-color: #ddd;
 }
 
+
+
 .btn-db-k {
     color: #379F7A;
 }
@@ -92,7 +94,6 @@ div.side:active {
 div.side>i {
     display: inline-block;
     width: 10%;
-    
     padding-right: 2px;
     font-size: 12pt;
     text-align: center;

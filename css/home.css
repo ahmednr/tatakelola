@@ -20,6 +20,7 @@ a {
     z-index: 0;
 }
 
+
 /* -- SEARCH BAR -- */
 
 #cari {
@@ -48,119 +49,72 @@ input {
 }
 
 
-/* -- DASHBOARD BUTTONS -- */
+/* -- DASHBOARDS BUTTON -- */
 
-#btn-dbk {
+.dropdown {
     position: absolute;
-    top: 7px;
-    left: 310px
+    top: 5px;
+    right: 10px;
+    display: inline-block;
 }
 
-#btn-dbm {
-    position: absolute;
-    top: 7px;
-    left: 350px;
-}
-
-button.dash {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+.dropbtn {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    font-size: 1.4em;
+    font-weight: bold;
     cursor: pointer;
-    border: 0;
-    background: transparent;
-    outline: 0;
-}
-
-button.dash .icon {
-    position: relative;
-    background: #fff;
-    line-height: 30px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    color: #535353;
-    font-size: 14px;
-    -webkit-transition: .2s color;
-    transition: .2s color;
+    outline: none;
+    z-index: 99;
+    width: 40px;
+    padding: 5px;
     border-radius: 5px;
-    box-shadow: 1px 1px 1px #888888;
-}
-
-button.dash .icon .fa {
-    width: 20px;
-    -webkit-transition: .2s all;
+    box-shadow: 1px 1px 1px #888;
     transition: .2s all;
 }
 
-button.dash .icon:after {
-    content: ' ';
-    display: block;
+.dropdown-content {
+    display: none;
     position: absolute;
-    width: 5px;
-    height: 5px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    background: #fff;
-    bottom: 0px;
-    right: 12.5px;
-    -webkit-transition: .2s right;
-    transition: .2s right;
-    z-index: 1;
-}
-
-button.dash .text {
-    position: relative;
-    width: 0;
-    height: 30px;
+    right: 0;
     overflow: hidden;
-    font-size: 8pt;
-    background: #3B8686;
-    top: 30px;
-    left: -30px;
-    text-align: center;
-    line-height: 30px;
-    color: #fff;
-    font-weight: 300;
-    -webkit-transition: .2s all;
     transition: .2s all;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 1px 1px 1px #888;
+    z-index: 1;
+    border-radius: 5px 0 5px 5px;
 }
 
-button.dash .text span {
-    width: 100%;
-    opacity: 0;
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    -webkit-transition: .3s all;
-    transition: .3s all;
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s ease;
+    white-space: nowrap;
 }
 
-button.dash:hover .icon {
+.dropdown-content img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
     color: #3B8686;
-    border-radius: 0;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-radius: 5px;
 }
 
-button.dash:hover .icon:after {
-    bottom: -2px;
+.dropdown:hover .dropdown-content {
+    display: inline-block;
 }
 
-button.dash:hover .text {
-    width: 150px;
+.dropdown:hover .dropbtn {
+    color: #3B8686;
+    border-radius: 5px 5px 0 0;
 }
-
-button.dash:hover .text span {
-    opacity: 1;
-    top: 0;
-}
-
 
 
 /* -- SIDEBAR BUTTONS -- */
@@ -223,7 +177,7 @@ button.side .icon {
     width: 30px;
     height: 30px;
     text-align: center;
-    color: #535353;
+    color: #333;
     font-size: 14px;
     -webkit-transition: .2s color;
     transition: .2s color;

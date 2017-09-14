@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" href="[INSERT apple-tuch-icon.png]">
 
     <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/test.css">
+    <link rel="stylesheet" href="./css/home.css">
 
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
@@ -31,13 +31,13 @@
 
 <body>
 
-<!--    MAP     -->
-   
+    <!--    MAP     -->
+
     <div id="map"></div>
-    
-    
-<!--    SEARCH BAR     -->
-    
+
+
+    <!--    SEARCH BAR     -->
+
     <div id="cari">
         <img src="res/logobp3ti.png">
         <input list="daftar-desa" type="text" placeholder="Cari desa">
@@ -50,33 +50,24 @@
                 <option value="Desa E"></option>
                 <option value="Desa F"></option>
                 <option value="Desa G"></option>
-                
             </datalist>
     </div>
 
 
-<!--    DASHBOARD BUTTONS     -->
-   
-    <button class="dash" id="btn-dbk">
-        <div class='icon'>
-            <i class='fa fa-money'></i>
-        </div>
-        <div class='text'>
-            <span>Dashboard Keuangan</span>
-        </div>
-    </button>
-    
-    <button class="dash" id="btn-dbm">
-        <div class='icon'>
-            <i class='fa fa-money'></i>
-        </div>
-        <div class='text'>
-            <span>Dashboard Monitoring</span>
-        </div>
-    </button>
+    <!--    DASHBOARDS BUTTON     -->
 
-<!--    SIDE BUTTONS     -->
-   
+    <div class="dropdown" style="float:right;">
+        <button class="dropbtn">&#9776;</button>
+
+        <div class="dropdown-content">
+            <a href="#"><img src="res/graph1.svg">Dashboard Keuangan</a>
+            <a href="#"><img src="res/graph2.svg">Dashboard Monitoring</a>
+            <a href="#"><img src="res/news.svg">Kabar Desa</a>
+        </div>
+    </div>
+
+    <!--    SIDE BUTTONS     -->
+
     <button class="side" id="btn-apbdes">
         <div class='icon'>
             <i class='fa fa-money'></i>
@@ -85,7 +76,7 @@
             <span>APBDes</span>
         </div>
     </button>
-    
+
     <button class="side" id="btn-luasdesa">
         <div class='icon'>
             <i class='fa fa-map'></i>
@@ -94,7 +85,7 @@
             <span>Luas Desa</span>
         </div>
     </button>
-    
+
     <button class="side" id="btn-penduduk">
         <div class='icon'>
             <i class='fa fa-male'></i>
@@ -103,7 +94,7 @@
             <span>Jumlah Penduduk</span>
         </div>
     </button>
-    
+
     <button class="side" id="btn-pendidikan">
         <div class='icon'>
             <i class='fa fa-building'></i>
@@ -112,7 +103,7 @@
             <span>Pendidikan</span>
         </div>
     </button>
-    
+
     <button class="side" id="btn-listrik">
         <div class='icon'>
             <i class='fa fa-plug'></i>
@@ -121,7 +112,7 @@
             <span>Listrik</span>
         </div>
     </button>
-    
+
     <button class="side" id="btn-pengairan">
         <div class='icon'>
             <i class='fa fa-tint'></i>
@@ -130,7 +121,7 @@
             <span>Pengairan</span>
         </div>
     </button>
-    
+
     <button class="side" id="btn-komunikasi">
         <div class='icon'>
             <i class='fa fa-phone'></i>
@@ -139,7 +130,7 @@
             <span>Sarana Komunikasi</span>
         </div>
     </button>
-    
+
     <button class="side" id="btn-potensi">
         <div class='icon'>
             <i class='fa fa-leaf'></i>
