@@ -1,0 +1,156 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Tata Kelola</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[ENTER SITE DESCRIPTION HERE]">
+    <meta name="author" content="[ENTER AUTHOR INFO HERE]">
+
+    <link rel="apple-touch-icon" href="[INSERT apple-tuch-icon.png]">
+
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/test.css">
+
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+
+
+</head>
+
+<body>
+
+    <!--    MAP     -->
+
+    <div id="map"></div>
+
+
+    <!--    SEARCH BAR     -->
+
+    <div id="cari">
+        <img src="res/logobp3ti.png">
+        <input list="daftar-desa" type="text" placeholder="Cari desa">
+
+        <datalist id="daftar-desa">
+                <option value="Desa A"></option>
+                <option value="Desa B"></option>
+                <option value="Desa C"></option>
+                <option value="Desa D"></option>
+                <option value="Desa E"></option>
+                <option value="Desa F"></option>
+                <option value="Desa G"></option>
+            </datalist>
+    </div>
+
+
+    <!--    DASHBOARDS BUTTON     -->
+
+    <div class="dropdown" style="float:right;">
+        <button class="dropbtn">&#9776;</button>
+
+        <div class="dropdown-content">
+            <a href="#"><img src="res/graph1.svg">Dashboard Keuangan</a>
+            <a href="#"><img src="res/graph2.svg">Dashboard Monitoring</a>
+            <a href="#"><img src="res/news.svg">Kabar Desa</a>
+        </div>
+    </div>
+
+    <!--    SIDE BAR     -->
+
+   <div class="sidebar">
+        <a href="#">
+            <div id="btn-apbdes" class="side">
+                <div class="icon"><i class="fa fa-money"></i></div>
+                <div class="desc"><h4>Rp 971 Juta (APBDes 2016)</h4></div>
+
+            </div>
+        </a>
+
+        <a href="#">
+            <div id="btn-luasdesa" class="side">
+                <div class="icon"><i class="fa fa-map"></i></div>
+                <div class="desc"><h4>200 km2</h4></div>
+
+            </div>
+        </a>
+
+        <a href="#">
+            <div id="btn-penduduk" class="side">
+                <div class="icon"><i class="fa fa-male"></i></div>
+                <div class="desc"><h4><i class="fa fa-mars"></i> 743 &nbsp;&nbsp; <i class="fa fa-venus"></i> 707</h4></div>
+
+            </div>
+        </a>
+
+        <a href="#">
+            <div id="btn-pendidikan" class="side">
+                <div class="icon"><i class="fa fa-building"></i></div>
+                <div class="desc"><h4>3 SD &nbsp;&nbsp; 1 SMP &nbsp;&nbsp; 0 SMA</h4></div>
+
+            </div>
+        </a>
+
+        <a href="#">
+            <div id="btn-listrik" class="side">
+                <div class="icon"><i class="fa fa-plug"></i></div>
+                <div class="desc"><h4>120 dari 488 KK</h4></div>
+
+            </div>
+        </a>
+
+        <a href="#">
+            <div id="btn-pengairan" class="side">
+                <div class="icon"><i class="fa fa-tint"></i></div>
+                <div class="desc"><h4>Mengandalkan 1 unit system perpipaan dan 3 sumber mata air yang menyebar di beberapa dusun</h4></div>
+
+            </div>
+        </a>
+
+        <a href="#">
+            <div id="btn-komunikasi" class="side">
+                <div class="icon"><i class="fa fa-phone"></i></div>
+                <div class="desc"><h4>Telkomsel, Alas, Telemor, TLS TT, Telkomcell</h4></div>
+
+            </div>
+        </a>
+
+        <a href="#">
+            <div id="btn-potensi" class="side">
+                <div class="icon"><i class="fa fa-leaf"></i></div>
+                <div class="desc"><h4>Pertanian : <br> Jagung, kacang tanah, bawang merah, bawang putih, dan kacang hijau <br><br> Peternakan :<br> Sapi
+                </h4></div>
+
+            </div>
+        </a>
+    </div>
+
+
+    <script>
+        var map = L.map('map').setView([-0.7893, 113.9213], 5);
+
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: '',
+            id: 'mapbox.streets'
+        }).addTo(map);
+        map.zoomControl.setPosition('bottomright');
+
+        //map.locate({setView: true, maxZoom: 16});
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>

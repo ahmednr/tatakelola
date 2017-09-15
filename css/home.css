@@ -87,6 +87,7 @@ input {
 }
 
 .dropdown-content a {
+    width: 100%;
     color: #333;
     padding: 12px 16px;
     font-size: 10pt;
@@ -103,9 +104,8 @@ input {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #eee;
     color: #3B8686;
-    border-radius: 5px;
 }
 
 .dropdown:hover .dropdown-content {
