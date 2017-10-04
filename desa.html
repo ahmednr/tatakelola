@@ -73,12 +73,12 @@
         <button class="prev">&#8678; Desa Sebelum</button>
         <button class="next">Desa Berikut &#8680;</button>
     </div>
-    
-    <!-- SHOW/HIDE BUTTON -->
-    <div class="showhide">
-        <button onclick="showhide()" class="shide" id="shide">Rincian</button>
+
+    <!-- SHOW/HIDE SIDEBAR BUTTON -->
+    <div class="showhideside">
+        <button onclick="showhideside()" class="shide" id="shide">Rincian &dtrif;</button>
     </div>
-   
+
     <!--    SIDE BAR     -->
 
     <div class="sidebar" id="sidebar">
@@ -163,7 +163,15 @@
         </a>
     </div>
 
+    <!-- SHOW/HIDE STATS BUTTON -->
+    <div class="showhidestat">
+        <button onclick="showhidestat()" class="statsb" id="shide">Statistik &dtrif;</button>
+    </div>
     
+    <!-- STATISTIC -->
+    <div class="statistic" id="statistic">
+        <img src="res/stats.png" />
+    </div>
 
     <!-- LEGEND --->
 
@@ -224,16 +232,25 @@
         map.zoomControl.setPosition('bottomright');
 
         //map.locate({setView: true, maxZoom: 16});
-        
-        function showhide() {
-        var x = document.getElementById('sidebar');
-        var y = document.getElementById('shide');
-        if (x.style.display === 'none') {
-            x.style.display = 'inline-block';
-        } else {
-            x.style.display = 'none';
+
+        function showhideside() {
+            var x = document.getElementById('sidebar');
+            if (x.style.display === 'none') {
+                x.style.display = 'inline-block';
+            } else {
+                x.style.display = 'none';
+            }
         }
-}
+        
+        function showhidestat() {
+            var x = document.getElementById('statistic');
+            if (x.style.display === 'none') {
+                x.style.display = 'inline-block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
