@@ -243,11 +243,11 @@ input.cari {
 }
 
 
-/* -- SHOW/HIDE SIDEBAR BUTTON -- */
+/* -- SHOW/HIDE STATISTIC BUTTON -- */
 
 .showhidestat {
     position: absolute;
-    top: 5px;
+    top: 2px;
     left: 305px;
     display: inline-block;
 }
@@ -275,7 +275,7 @@ input.cari {
 .statistic {
     position: absolute;
     left: 305px;
-    top: 25px;
+    top: 22px;
     display: inline-block;
     box-shadow: 1px 1px 1px #888;
 }
